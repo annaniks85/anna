@@ -20,8 +20,8 @@ def test_get_client(client) -> None:
 
 def test_create_client(client) -> None:
     client_data = {
-        "name": "Никита",
-        "surname": "Нестеренко",
+        "name": "Vera",
+        "surname": "Kondratieva",
         "credit_card": "master",
         "car_number": "J896KL",
     }
