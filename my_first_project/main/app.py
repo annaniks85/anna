@@ -109,7 +109,7 @@ def create_app():
                 )
                 db.session.add(new_parking)
                 db.session.commit()
-                return "Запись о заезде на парковку создана.", 201
+                return "Запись о въезде на парковку создана.", 201
             return "Парковка заполнена."
 
     @app.route("/client_parkings", methods=["DELETE"])
