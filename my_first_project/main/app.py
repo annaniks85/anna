@@ -1,5 +1,5 @@
 import datetime
-from typing import Any, List, Optional
+from typing import Any, Optional
 
 from flask import Flask, jsonify, request, Response
 from flask_sqlalchemy import SQLAlchemy
