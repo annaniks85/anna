@@ -22,7 +22,7 @@ jobs:
         run: pytest
       - name: Lint with flake8
         run: |
-          flake8 main tests
+          flake8 my_first_project/main my_first_project/tests
       - name: Lint with mypy
         run: |
           mypy main tests
