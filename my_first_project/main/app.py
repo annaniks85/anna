@@ -29,7 +29,7 @@ def create_app():
         return {"message": "Hello!"}
 
     @app.route("/clients", methods=["GET"])
-    def get_clients() -> tuple[List, Any]:
+    def get_clients() -> tuple[List, int]:
         clients = db.session.query(Client).all()
         clients_list = [c.to_json() for c in clients]
         return jsonify(clients_list), 200
