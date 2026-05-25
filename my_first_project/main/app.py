@@ -1,7 +1,7 @@
 import datetime
 from typing import Any, List, Optional
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import and_
 
@@ -29,7 +29,7 @@ def create_app():
         return {"message": "Hello!"}
 
     @app.route("/clients", methods=["GET"])
-    def get_clients() -> tuple[List, int]:
+    def get_clients() -> tuple[Response, int]:
         clients = db.session.query(Client).all()
         clients_list = [c.to_json() for c in clients]
         return jsonify(clients_list), 200
