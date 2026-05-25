@@ -13,7 +13,7 @@ jobs:
       - name: Clone a repository
         uses: actions/checkout@v4
       - name: Install Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v3
         with:
           python-version: '3.12'
       - name: Install dependencies
